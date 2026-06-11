@@ -95,12 +95,12 @@ function ProductCard({
               <p className="text-[10px] text-[#ccc] tracking-[0.25em] uppercase text-center mb-1.5">
                 {added && added !== "one" ? `Added ${added} ✓` : "Select size"}
               </p>
-              <div className="flex gap-1.5 justify-center">
+              <div className="flex gap-1 justify-center w-full">
                 {SIZES.map((size) => (
                   <button
                     key={size}
                     onClick={() => handleAdd(size)}
-                    className={`flex-1 max-w-[64px] h-10 text-xs font-bold rounded transition-colors duration-150 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5ff00] ${
+                    className={`flex-1 h-9 text-[11px] font-bold rounded transition-colors duration-150 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5ff00] ${
                       added === size
                         ? "bg-[#f5ff00] text-black"
                         : "bg-white/10 text-white hover:bg-[#f5ff00] hover:text-black"
