@@ -1,8 +1,10 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useCart } from "@/lib/cart";
 
 const easeExpo = [0.16, 1, 0.3, 1] as const;
+const SIZES = ["S", "M", "L", "XL", "XXL"] as const;
 
 const bundles = [
   {
@@ -39,6 +41,21 @@ const BUNDLE_IMAGES = [
 
 export default function Bundles() {
   const { addItem } = useCart();
+  const [selectedSizes, setSelectedSizes] = useState<Record<string, string>>({});
+  const [added, setAdded] = useState<Record<string, boolean>>({});
+
+  function handleAdd(bundle: (typeof bundles)[0], imageUrl: string) {
+    const size = selectedSizes[bundle.name];
+    if (!size) return;
+    addItem({
+      id: `bundle-${bundle.name}-${size}`,
+      name: `${bundle.name} — ${size}`,
+      price: bundle.price,
+      image: imageUrl,
+    });
+    setAdded((prev) => ({ ...prev, [bundle.name]: true }));
+    setTimeout(() => setAdded((prev) => ({ ...prev, [bundle.name]: false })), 2000);
+  }
 
   return (
     <section id="bundles" className="py-24 bg-[#0d0d0d] px-5 md:px-8">
@@ -149,23 +166,48 @@ export default function Bundles() {
                 ))}
               </ul>
 
+              {/* Size selector */}
+              <div className="mb-4">
+                <p className={`text-[10px] font-bold tracking-[0.3em] uppercase mb-2 ${bundle.featured ? "text-black/50" : "text-[#666]"}`}>
+                  Select size
+                </p>
+                <div className="flex gap-1">
+                  {SIZES.map((size) => {
+                    const isSelected = selectedSizes[bundle.name] === size;
+                    return (
+                      <button
+                        key={size}
+                        onClick={() => setSelectedSizes((prev) => ({ ...prev, [bundle.name]: size }))}
+                        className={`flex-1 h-9 text-[11px] font-bold rounded transition-colors duration-150 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5ff00] ${
+                          bundle.featured
+                            ? isSelected
+                              ? "bg-black text-[#f5ff00]"
+                              : "bg-black/10 text-black hover:bg-black/20"
+                            : isSelected
+                            ? "bg-[#f5ff00] text-black"
+                            : "bg-white/10 text-white hover:bg-[#f5ff00] hover:text-black"
+                        }`}
+                        aria-pressed={isSelected}
+                        aria-label={`Talla ${size}`}
+                      >
+                        {size}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
               {/* CTA */}
               <button
-                onClick={() =>
-                  addItem({
-                    id: `bundle-${bundle.name}`,
-                    name: bundle.name,
-                    price: bundle.price,
-                    image: BUNDLE_IMAGES[i] ?? BUNDLE_IMAGES[0],
-                  })
-                }
-                className={`w-full py-3.5 font-bold text-sm tracking-widest uppercase rounded transition-all duration-200 cursor-pointer ${
+                onClick={() => handleAdd(bundle, BUNDLE_IMAGES[i] ?? BUNDLE_IMAGES[0])}
+                disabled={!selectedSizes[bundle.name]}
+                className={`w-full py-3.5 font-bold text-sm tracking-widest uppercase rounded transition-all duration-200 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed ${
                   bundle.featured
                     ? "bg-black text-[#f5ff00] hover:bg-[#111]"
                     : "border border-white/20 text-white hover:border-[#f5ff00] hover:text-[#f5ff00]"
                 }`}
               >
-                Get This Pack
+                {added[bundle.name] ? "Added ✓" : "Get This Pack"}
               </button>
             </motion.div>
           ))}
