@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Categories from "@/components/Categories";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import Manifesto from "@/components/Manifesto";
+import TheDesign from "@/components/TheDesign";
 import Bundles from "@/components/Bundles";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -17,6 +18,7 @@ export default function Home() {
       <Categories />
       <FeaturedProducts />
       <Manifesto />
+      <TheDesign />
       <Bundles />
       <Testimonials />
       <FAQ />

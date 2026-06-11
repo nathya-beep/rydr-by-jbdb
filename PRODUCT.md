@@ -41,6 +41,38 @@ Emotional goal: pride of membership. The feeling of belonging to something that 
 4. **Static energy** — The brand lives in motion (riders, streets, volts) but the design itself is controlled and deliberate. Tension between stillness and speed is the visual language.
 5. **One palette, total commitment** — Black and neon yellow are not design choices; they are the brand. Every element either uses them or gets out of the way.
 
+## Design Philosophy — Techwear Direction
+
+RYDR draws from the **Techwear** movement: the intersection of functional design, technical materials, and urban aesthetics. Inspiration comes from brands like CAKE and Ryvid, and principles aligned with Dieter Rams' functionalist approach.
+
+### Core Techwear Principles for RYDR
+
+**1. Technical Materials**
+- Outerwear: 380gsm heavyweight cotton fleece — durable, preshrunk, colorfast
+- Tees: 220gsm preshrunk ringspun cotton — structured, breathable, built for repeated wear
+- Future drops: explore waterproof and wind-resistant shell fabrics
+
+**2. Modular & Functional Design**
+- Multi-pocket architecture with zip closures on all outerwear
+- Adjustable systems: cinch cords, drawcords, structured hems
+- No decorative elements — every design decision serves a function
+
+**3. Palette Discipline**
+- Black (`#0d0d0d`) is the base material — not a color choice
+- Neon yellow (`#f5ff00`) is the signal — used exclusively for brand marks and functional accents
+- Electric orange (`#ff3c00`) for "Limited" and "Bestseller" badges only
+- No gradients, no noise, no deviation
+
+**4. Structured Silhouettes**
+- Oversized where mobility demands it (shoulders, body)
+- Structured where presence demands it (collar, cuffs, hem)
+- Pieces that look intentional at speed — not relaxed or casual
+
+### Anti-references (Techwear edition)
+- No Gore-Tex cosplay — RYDR is streetwear first, not outdoor gear
+- No excessive branding — the mark is restrained, placement is precise
+- No athleisure crossover — this is urban, not gym
+
 ## Accessibility & Inclusion
 
 - WCAG AA target (4.5:1 body text minimum).

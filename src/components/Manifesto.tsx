@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const easeExpo = [0.16, 1, 0.3, 1] as const;
 
 const lines = [
-  "The city was never built for us.",
-  "They told us to wait in traffic.",
-  "We took the lane.",
-  "They said slow down.",
-  "We went electric.",
+  "Every stitch is a decision.",
+  "Every pocket, a purpose.",
+  "We don't dress for the commute.",
+  "We gear up for the ride.",
+  "Function without apology.",
 ];
 
 export default function Manifesto() {
@@ -109,10 +109,10 @@ export default function Manifesto() {
           viewport={{ once: true }}
           transition={{ duration: 0.65, ease: easeExpo, delay: 0.2 }}
         >
-          RYDR isn&apos;t just clothing. It&apos;s the uniform of a movement —
-          riders who chose freedom over frustration, volts over gas, streets over
-          highways. Every piece is built for the culture that&apos;s rewriting
-          urban mobility, one ride at a time.
+          RYDR draws from Techwear — where functional design meets street identity.
+          Technical materials, modular construction, dark palette with electric
+          accents. Built for riders who demand both performance and presence.
+          The culture is the product. The product is the gear.
         </motion.p>
 
         {/* Signature */}
