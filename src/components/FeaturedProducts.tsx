@@ -7,7 +7,7 @@ import { useCart } from "@/lib/cart";
 
 const easeExpo = [0.16, 1, 0.3, 1] as const;
 
-const SIZES = ["S", "M", "L", "XL"] as const;
+const SIZES = ["S", "M", "L", "XL", "XXL"] as const;
 
 /** Caps are one-size; tees and hoodies need a size choice. */
 function isSized(category: string) {
