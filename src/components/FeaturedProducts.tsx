@@ -133,7 +133,7 @@ function ProductCard({
             ${product.price}
           </span>
           <span className="text-xs text-[#999]">
-            {sized ? "S–XL" : "One size"}
+            {sized ? "S–XXL" : "One size"}
           </span>
         </div>
       </div>
