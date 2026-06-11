@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     siteName: "RYDR by JBDB",
     images: [
       {
-        url: "/hero-riders.png",
-        width: 1920,
-        height: 1080,
-        alt: "RYDR by JBDB — E-Bike Streetwear",
+        url: "/logo-color.png",
+        width: 1336,
+        height: 784,
+        alt: "RYDR by JBDB",
       },
     ],
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RYDR by JBDB — Electric Streets. Real Style.",
     description: "Streetwear born from e-bike culture. Bold drops for riders who move different.",
-    images: ["/hero-riders.png"],
+    images: ["/logo-color.png"],
   },
 };
 
